@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "header": {
+        "title": "👮🏻‍♂️ New Ticket",
+        "subtitle": "#{ticket.title}",
+        "imageUrl": "https://example.org/logo.png",
+        "imageStyle": "IMAGE"
+      },
+      "sections": [
+        {
+          "widgets": [
+            {
+              "keyValue": {
+                "topLabel": "Priority: #{ticket.priority.name}",
+                "content": "🙋🏻‍♂️ #{ticket.customer.firstname} #{ticket.customer.lastname}",
+                "contentMultiline": "true",
+                "bottomLabel": "📧 #{ticket.customer.email}"
+              }
+            },
+            {
+              "buttons": [
+                {
+                  "textButton": {
+                    "text": "Open Ticket",
+                    "onClick": {
+                      "openLink": {
+                        "url": "https://example.org/#ticket/zoom/#{ticket.id} "
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
